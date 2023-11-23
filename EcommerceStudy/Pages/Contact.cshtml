@@ -1,0 +1,104 @@
+﻿@page
+@model EcommerceStudy.Pages.ContactModel
+@{
+}
+
+<div class="row">
+    <div class="col-lg-9 mx-auto p-3">
+        <h3 class="mb-3 font-weight-normal text-center pb-4">Formulário de contato</h3>
+
+        @if (Model.MensagemErro.Length > 0)
+        {
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                <strong>@Model.MensagemErro</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+        }
+        else if (Model.MensagemSucesso.Length > 0)
+        {
+                <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                    <strong>@Model.MensagemSucesso</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
+        }
+
+        <form method="post">
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Primeiro Nome*</label>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" name="primeironome" value="@Model.PrimeiroNome" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Ultimo Nome*</label>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" name="ultimonome" value="@Model.UltimoNome" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Email*</label>
+                <div class="col-sm-8">
+                    <input class="form-control" type="email" name="email" value="@Model.Email" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Telefone*</label>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" name="phone" value="@Model.Telefone"/>
+                </div>
+            </div>
+             <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Status*</label>
+                <div class="col-sm-8">
+                    <select class="form-select" name="status">
+                        @if(Model.Status.Equals("Status")){
+                        <option value="Status" selected>Status</option>
+                        }
+                        else
+                        {
+                        <option value="Status" >Status</option>
+                        }
+                        @if (Model.Status.Equals("Pedido de reembolso"))
+                        {
+                                            <option value="Pedido de reembolso" selected>Pedido de reembolso</option>
+                        }
+                        else
+                        {
+                                            <option value="Pedido de reembolso" >Pedido de reembolso</option>
+                        }
+                        @if (Model.Status.Equals("Aplicação de trabalho"))
+                        {
+                                            <option value="Aplicação de trabalho" selected>Aplicação de trabalho</option>
+                        }
+                        else
+                        {
+                                            <option value="Aplicação de trabalho" >Aplicação de trabalho</option>
+                        }
+                        @if (Model.Status.Equals("Other"))
+                        {
+                                                    <option value="Outro" selected>Outro</option>
+                        }
+                        else
+                        {
+                                                        <option value="Outro" >Outro</option>
+                        }
+                    </select>
+                </div>
+            </div>
+             <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Mensagem*</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" name="mensagem">@Model.Mensagem</textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="offset-sm-4" col-sm-8">
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
