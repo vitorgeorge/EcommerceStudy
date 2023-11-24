@@ -1,0 +1,38 @@
+﻿@page
+@model EcommerceStudy.Pages.Admin.Mensagens.IndexModel
+@{
+}
+
+<br>
+<h2>Mensagens Recebidas</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome usuario</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Assunto</th>
+            <th>Criado em</th>
+            <th>Acao</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listMensagens)
+        {
+            <tr>
+                <td>@item.Id</td>
+                        <td>@item.PrimeiroNome @item.UltimoNome</td>
+                            <td>@item.Email</td>
+                                <td>@item.Telefone</td>
+                                    <td>@item.Assunto</td>
+                                        <td>@item.CriadoEm</td>
+                                    <td style="white-space:nowrap">
+                                        <a class="btn btn-primary btn-sm" href="/Admin/Mensagens/Detalhes?id=@item.Id">Detalhes</a>
+                                                <a class="btn btn-danger btn-sm" href="/Admin/Mensagens/Deletar?id=@item.Id">Deletar</a>
+                                    </td>
+            </tr>
+        }
+    </tbody>
+</table>

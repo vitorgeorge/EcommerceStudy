@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Vitor\source\repos\EcommerceStudy\EcommerceStudy
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Vitor/source/repos/EcommerceStudy/EcommerceStudy/Pages/Admin/Mensagens/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTWVuc2FnZW5zXERlbGV0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vitor/source/repos/EcommerceStudy/EcommerceStudy/Pages/Admin/Mensagens/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTWVuc2FnZW5zXERldGFsaGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vitor/source/repos/EcommerceStudy/EcommerceStudy/Pages/Admin/Mensagens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTWVuc2FnZW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Vitor/source/repos/EcommerceStudy/EcommerceStudy/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

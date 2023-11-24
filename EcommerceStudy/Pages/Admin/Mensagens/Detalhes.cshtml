@@ -1,0 +1,58 @@
+﻿@page
+@model EcommerceStudy.Pages.Admin.Mensagens.DetalhesModel
+@{
+}
+
+<h2 class="my-3">Detalhes da mensagem</h2>
+
+<div class="row mb-2">
+    <label class="col-sm-3 col-form-label">ID</label>
+    <div class="col-sm-7">
+        <input type="text" readonly class="form-control-plaintext" value="@Model.mensagemInfo.Id" />
+    </div>
+</div>
+
+<div class="row mb-2">
+    <label class="col-sm-3 col-form-label">Nome usuario</label>
+    <div class="col-sm-7">
+        <input type="text" readonly class="form-control-plaintext" value="@Model.mensagemInfo.PrimeiroNome @Model.mensagemInfo.UltimoNome" />
+    </div>
+</div>
+
+<div class="row mb-2">
+    <label class="col-sm-3 col-form-label">Email</label>
+    <div class="col-sm-7">
+        <input type="text" readonly class="form-control-plaintext" value="@Model.mensagemInfo.Email" />
+    </div>
+</div>
+
+<div class="row mb-2">
+    <label class="col-sm-3 col-form-label">Telefone</label>
+    <div class="col-sm-7">
+        <input type="text" readonly class="form-control-plaintext" value="@Model.mensagemInfo.Telefone" />
+    </div>
+</div>
+
+        <div class="row mb-2">
+    <label class="col-sm-3 col-form-label">Assunto</label>
+    <div class="col-sm-7">
+        <input type="text" readonly class="form-control-plaintext" value="@Model.mensagemInfo.Assunto" />
+    </div>
+</div>
+
+<div class="row mb-2">
+    <label class="col-sm-3 col-form-label">Mensagem</label>
+    <div class="col-sm-7">
+        <textarea readonly class="form-control">@Model.mensagemInfo.Mensagem</textarea>
+    </div>
+</div>
+<div class="row mb-2">
+    <label class="col-sm-3 col-form-label">Criado em</label>
+    <div class="col-sm-7">
+        <input type="text" readonly class="form-control-plaintext" value="@Model.mensagemInfo.CriadoEm" />
+    </div>
+</div>
+
+<div class="offset-sm-3 col-sm-7">
+    <a class="btn btn-primary" href="/Admin/Mensagens/Index" role="button">OK</a>
+</div>
